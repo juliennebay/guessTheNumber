@@ -9,7 +9,10 @@ const Header = props => {
     <View
       style={{
         ...styles.headerBase,
-        ...Platform.select({ ios: headerIOS, android: headerAndroid })
+        ...Platform.select({
+          ios: styles.headerIOS,
+          android: styles.headerAndroid
+        })
       }}
     >
       <TitleText style={styles.title}>{props.title}</TitleText>
